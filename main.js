@@ -27,5 +27,10 @@ function prevPage() {
     }
 }
 
-// Initialize the sections on load
-updateSections();
+function autoNextPage() {
+    nextPage();
+    setTimeout(autoNextPage, 5000);
+}
+
+updateSections(); //Update tampilan jon
+setTimeout(autoNextPage, 5000); // Otomatis pindah 5 detik
